@@ -25,12 +25,13 @@ function addSoup(){
 }
 
 function addTotal(){
-    const tax = 0.1*cost;
+    const tax = (10*cost) / 100;
     const totalCost = cost + tax;
 
     console.log(`Total Cost: \n
     Coffee: ${coffee} X $5
     Bagel: ${bagel} X $1.5
     Soup: ${soup} X $9
-    Price: $${totalCost}`);
+    Price: $${totalCost}
+    Tax: $${tax}`);
 }
