@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+</head>
+
+<body>
+    <script src="restaurant.js"> </script>
+
+    <button onClick="
+    coffee++;
+    cost+=5;
+    console.log(`Coffee quantity: ${coffee}`);
+    console.log(`Cost of food: $${cost}`);">Coffee</button>
+    <button onClick="
+    bagel++;
+    cost+=(5/2);
+    console.log(`Bagel quantity: ${bagel}`);
+    console.log(`Cost of food: $${cost}`);">Bagel</button>
+    <button onClick="
+    soup++;
+    cost+=9;
+    console.log(`Soup quantity: ${soup}`);
+    console.log(`Cost of food: $${cost}`);">Soup</button>
+    <button onClick="
+    const tax = 0.1*cost;
+    const totalCost = cost + tax;
+
+    console.log(`Total Cost: \n
+    Coffee: ${coffee} X $5
+    Bagel: ${bagel} X $1.5
+    Soup: ${soup} X $9
+    Price: $${totalCost}`);">Total Cost</button>
+
+
+</body>
+
+</html>

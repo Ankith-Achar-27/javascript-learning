@@ -1,7 +1,7 @@
 // Ways to create variable
 
 // 1. let  -> the variable can be reassigned again
-let var1 = 2;
+let var1 = 2;3
 let var2 = 3;
 let cal = var1 + var2;
 console.log(cal);
