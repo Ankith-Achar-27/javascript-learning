@@ -1,4 +1,4 @@
-function choseRock(){
+function pickCompMove(){
     const randomNumber = Math.random();
     let compMove = '';
 
@@ -11,7 +11,11 @@ function choseRock(){
     else if(randomNumber > 2/3 && randomNumber < 1){
          compMove = 'scissors';
     }
+    return compMove;
+}
 
+function choseRock(){
+    const compMove = pickCompMove();
     let result = '';
     if(compMove === 'rock'){
         result = 'Tie';
@@ -24,18 +28,7 @@ function choseRock(){
 }
 
 function chosePaper(){
-    const randomNumber = Math.random();
-    let compMove = '';
-
-    if(randomNumber >= 0 && randomNumber < 1 / 3){
-        compMove = 'rock';
-    }
-    else if(randomNumber > 1/3 && randomNumber < 2/3){
-         compMove = 'paper';
-    }
-    else if(randomNumber > 2/3 && randomNumber < 1){
-         compMove = 'scissors';
-    }
+    const compMove = pickCompMove();
 
     let result = '';
     if(compMove === 'rock'){
@@ -49,19 +42,7 @@ function chosePaper(){
 }
 
 function choseSccisor(){
-    const randomNumber = Math.random();
-    let compMove = '';
-
-    if(randomNumber >= 0 && randomNumber < 1 / 3){
-        compMove = 'rock';
-    }
-    else if(randomNumber > 1/3 && randomNumber < 2/3){
-         compMove = 'paper';
-    }
-    else if(randomNumber > 2/3 && randomNumber < 1){
-         compMove = 'scissors';
-    }
-
+   const compMove = pickCompMove();
     let result = '';
     if(compMove === 'rock'){
         result = 'You Lose';
