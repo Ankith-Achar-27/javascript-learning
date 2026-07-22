@@ -14,42 +14,36 @@ function pickCompMove(){
     return compMove;
 }
 
-function choseRock(){
+function playerGame(playerMove){
     const compMove = pickCompMove();
     let result = '';
-    if(compMove === 'rock'){
-        result = 'Tie';
-    } else if(compMove === 'paper'){
-        result = 'You lose'
-    } else if(compMove === 'scissors'){
-        result = 'You Win'
+    if(playerMove === 'rock'){
+        if(compMove === 'rock'){
+            result = 'Tie';
+        } else if(compMove === 'paper'){
+            result = 'You lose'
+        } else if(compMove === 'scissors'){
+            result = 'You Win'
+        }
     }
-    alert(`You picked rock.Computer picked ${compMove}. ${result}`);
-}
-
-function chosePaper(){
-    const compMove = pickCompMove();
-
-    let result = '';
-    if(compMove === 'rock'){
-        result = 'You Win';
-    } else if(compMove === 'paper'){
-        result = 'Tie'
-    } else if(compMove === 'scissors'){
-        result = 'You Lose'
+    if(playerMove === 'paper'){
+            if(compMove === 'rock'){
+            result = 'You Win';
+        } else if(compMove === 'paper'){
+            result = 'Tie'
+        } else if(compMove === 'scissors'){
+            result = 'You Lose'
+        }
     }
-    alert(`You picked paper.Computer picked ${compMove}. ${result}`);
-}
-
-function choseSccisor(){
-   const compMove = pickCompMove();
-    let result = '';
-    if(compMove === 'rock'){
-        result = 'You Lose';
-    } else if(compMove === 'paper'){
-        result = 'You Win'
-    } else if(compMove === 'scissors'){
-        result = 'Tie'
+    if(playerMove === 'scissors'){
+        if(compMove === 'rock'){
+            result = 'You Lose';
+        } else if(compMove === 'paper'){
+            result = 'You Win'
+        } else if(compMove === 'scissors'){
+            result = 'Tie'
+        }
     }
-    alert(`You picked scissor.Computer picked ${compMove}. ${result}`);
+
+    alert(`You picked ${playerMove}.Computer picked ${compMove}. ${result}`);
 }
