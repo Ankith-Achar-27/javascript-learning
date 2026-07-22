@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Rock Paper Scissors</h3>
+    <button onClick="playerGame('rock')">Rock</button>
+    <button onClick="playerGame('paper')">Paper</button>
+    <button onClick="playerGame('scissors')">Scissors</button>
+    <button onClick="
+        score.win=0;
+        score.loss=0;
+        score.tie=0;
+        localStorage.removeItem('score');
+    ">Reset Score</button>
+
+
+    <script src="rps.js"></script>
+</body>
+
+</html>
