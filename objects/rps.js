@@ -77,7 +77,7 @@
             // Every referesh resets the varibale values (win,loss,tie)
             // use localStrorage to store score in local memory
             // localStorage only supports strings
-            localStorage.setItem('score', JSON.strigify(score));
+            localStorage.setItem('score', JSON.stringify(score));
 
             alert(`You picked ${playerMove}.Computer picked ${compMove}. ${result}
 Wins: ${score.win}, Losses: ${score.loss}, Ties: ${score.tie}`);
