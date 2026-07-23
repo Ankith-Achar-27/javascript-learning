@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Shipping Calculator</title>
+</head>
+
+<body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under Rs100 = Order + Rs50 Shipping</p>
+    <p>Order over Rs100 = Free Shipping</p>
+
+    <input placeholder="Cost of order" onkeydown="handleKeyDown(event)" class="js-cost-input">
+    
+    <button onClick="calculateTotal();">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script src="shipping.js"></script>
+</body>
+
+</html>
