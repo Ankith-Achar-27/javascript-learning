@@ -1,9 +1,9 @@
 // DOM(Document Object Model) = built in object by js
 // DOM combines html and js together
 
-/*document.body.innerHTML = 'hello';
-document.title = 'Good job.!';*/
-/*
+document.body.innerHTML = 'hello';
+document.title = 'Good job.!';
+
 console.log(document.title);
 document.title = 'changed';
 
@@ -12,7 +12,7 @@ console.log(typeof document.body); //object
 
 console.log(document.body.innerHTML);
 document.body.innerHTML = '<button>Good Job</button>';
-*/
+
 
 // method is a function saved inside an object
 
