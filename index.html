@@ -4,119 +4,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankith Achar | JavaScript Learning</title>
+    <title>Ankith Achar | JavaScript Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: #1b1b1b;
+            background: linear-gradient(135deg, #111827, #1f2937);
             color: white;
-            padding: 40px;
         }
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .container {
+            width: min(1200px, 92%);
+            margin: auto;
         }
 
-        p {
-            color: #cfcfcf;
-            margin-bottom: 40px;
-            font-size: 18px;
+        /* NAVBAR */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
         }
 
-        h2 {
-            margin-bottom: 20px;
+        nav h2 {
+            color: #60a5fa;
         }
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #2b2b2b;
-            padding: 20px;
-            border-radius: 10px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
             transition: .3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            background: #333;
+        nav a:hover {
+            color: #60a5fa;
         }
 
-        a {
-            color: white;
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 90px 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 4.8rem);
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #c9d1d9;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .button-group {
+            margin-top: 40px;
+        }
+
+        .button-group a {
+            display: inline-block;
             text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: 600;
+            transition: .3s;
         }
 
-        .project-title {
-            font-size: 22px;
-            margin-bottom: 10px;
+        .primary {
+            background: #3b82f6;
+            color: white;
         }
 
-        .project-description {
-            color: #bdbdbd;
+        .secondary {
+            border: 2px solid #3b82f6;
+            color: white;
+        }
+
+        .button-group a:hover {
+            transform: translateY(-4px);
+        }
+
+        /* SECTION */
+
+        section {
+            margin: 60px 0;
+        }
+
+        section h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* GRID */
+
+        .projects {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+
+        }
+
+        .card {
+
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            border-radius: 16px;
+
+            padding: 25px;
+
+            transition: .35s;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-8px);
+            border-color: #60a5fa;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+
+        }
+
+        .card a {
+
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+        .title {
+
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+
+        }
+
+        .description {
+
+            color: #c9d1d9;
+            line-height: 1.6;
+            margin-bottom: 20px;
+
+        }
+
+        .badge {
+
+            display: inline-block;
+
+            background: #16a34a;
+
+            padding: 6px 14px;
+
+            border-radius: 30px;
+
+            font-size: .85rem;
+
+            font-weight: 600;
+
+        }
+
+        .coming {
+
+            background: #d97706;
+
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 50px 0;
+
+            color: #9ca3af;
+
+            border-top: 1px solid rgba(255, 255, 255, .08);
+
+            margin-top: 60px;
+
+        }
+
+        @media(max-width:650px) {
+
+            nav {
+
+                flex-direction: column;
+                gap: 15px;
+
+            }
+
         }
     </style>
+
 </head>
 
 <body>
 
-    <h1>JavaScript Learning Repository</h1>
+    <div class="container">
 
-    <p>
-        A collection of JavaScript exercises and projects built while learning modern JavaScript.
-    </p>
+        <nav>
 
-    <h2>Projects</h2>
+            <h2>Ankith Achar</h2>
 
-    <div class="projects">
+            <div>
 
-        <a href="rock-paper-scissors/">
-            <div class="card">
-                <div class="project-title">🎮 Rock Paper Scissors</div>
-                <div class="project-description">
-                    Play Rock Paper Scissors against the computer.
+                <a href="#projects">Projects</a>
+
+                <a href="https://github.com/Ankith-Achar-27" target="_blank">GitHub</a>
+
+            </div>
+
+        </nav>
+
+        <section class="hero">
+
+            <h1>JavaScript <span>Learning</span> Repository</h1>
+
+            <p>
+
+                A collection of JavaScript exercises and projects built while learning
+                modern JavaScript. This repository documents my journey from the
+                fundamentals to building interactive web applications.
+
+            </p>
+
+            <div class="button-group">
+
+                <a class="primary" href="rock-paper-scissors/">
+
+                    Play Rock Paper Scissors
+
+                </a>
+
+                <a class="secondary" target="_blank" href="https://github.com/Ankith-Achar-27/javascript-learning">
+
+                    GitHub Repository
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="projects">
+
+                <div class="card">
+
+                    <a href="rock-paper-scissors/">
+
+                        <div class="title">🎮 Rock Paper Scissors</div>
+
+                        <div class="description">
+
+                            Classic Rock Paper Scissors game featuring score persistence using
+                            localStorage.
+
+                        </div>
+
+                        <span class="badge">Completed</span>
+
+                    </a>
+
                 </div>
-            </div>
-        </a>
 
-        <div class="card">
-            <div class="project-title">🪙 Coin Flip</div>
-            <div class="project-description">
-                Coming Soon...
-            </div>
-        </div>
+                <div class="card">
 
-        <div class="card">
-            <div class="project-title">🧮 Calculator</div>
-            <div class="project-description">
-                Coming Soon...
-            </div>
-        </div>
+                    <div class="title">🪙 Coin Flip</div>
 
-        <div class="card">
-            <div class="project-title">✅ Todo List</div>
-            <div class="project-description">
-                Coming Soon...
-            </div>
-        </div>
+                    <div class="description">
 
-        <div class="card">
-            <div class="project-title">💰 Expense Tracker</div>
-            <div class="project-description">
-                Coming Soon...
+                        Randomized coin flip simulator built with JavaScript.
+
+                    </div>
+
+                    <span class="badge coming">Coming Soon</span>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="title">🧮 Calculator</div>
+
+                    <div class="description">
+
+                        A fully functional calculator supporting keyboard and mouse input.
+
+                    </div>
+
+                    <span class="badge coming">Coming Soon</span>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="title">✅ Todo List</div>
+
+                    <div class="description">
+
+                        Task management application using localStorage.
+
+                    </div>
+
+                    <span class="badge coming">Coming Soon</span>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="title">💰 Expense Tracker</div>
+
+                    <div class="description">
+
+                        Track daily expenses with categories and summaries.
+
+                    </div>
+
+                    <span class="badge coming">Coming Soon</span>
+
+                </div>
+
             </div>
-        </div>
+
+        </section>
+
+        <footer>
+
+            © 2026 Ankith Achar • Built with HTML, CSS & JavaScript
+
+        </footer>
 
     </div>
 
