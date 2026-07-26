@@ -67,8 +67,8 @@ javascript-learning/
 | Project | Status | Live Demo |
 |---------|--------|-----------|
 | Rock Paper Scissors | ✅ Completed | https://ankith-achar-27.github.io/javascript-learning/rock-paper-scissors/ |
+| Calculator | ✅ Completed | https://ankith-achar-27.github.io/javascript-learning/simple-calculator/ |
 | Coin Flip | 🚧 Coming Soon | — |
-| Calculator | 🚧 Coming Soon | — |
 | Todo List | 🚧 Coming Soon | — |
 | Expense Tracker | 🚧 Coming Soon | — |
 
