@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">SIMPLE CALCULATOR</h1>
+        <div class="calculator">
+            <div class="displaySolution"></div>
+            <p class="eachRow">
+                <button onclick="
+            updateCalculation('1');
+        " class="js-button">1</button>
+
+                <button onclick="
+            updateCalculation('2');
+        " class="js-button">2</button>
+
+                <button onclick="
+            updateCalculation('3');
+        " class="js-button">3</button>
+
+                <button onclick="
+            updateCalculation(' + ');
+        " class="js-button operator">+</button>
+            </p>
+
+            <p class="eachRow">
+                <button onclick="
+            updateCalculation('4');
+        " class="js-button">4</button>
+
+                <button onclick="
+            updateCalculation('5');
+        " class="js-button">5</button>
+
+                <button onclick="
+            updateCalculation('6');
+        " class="js-button">6</button>
+
+                <button onclick="
+            updateCalculation(' - ');
+        " class="js-button operator">-</button>
+            </p>
+
+            <p class="eachRow">
+                <button onclick="
+            updateCalculation('7');
+        " class="js-button">7</button>
+
+                <button onclick="
+            updateCalculation('8');
+        " class="js-button">8</button>
+
+                <button onclick="
+            updateCalculation('9');
+        " class="js-button">9</button>
+
+                <button onclick="
+            updateCalculation(' * ');
+        " class="js-button operator">*</button>
+            </p>
+
+            <p class="eachRow">
+                <button onclick="
+            updateCalculation('0');
+        " class="js-button">0</button>
+
+                <button onclick="
+            updateCalculation('.');
+        " class="js-button operator">.</button>
+
+                <button onclick=" evaluation()
+            console.log(calculation);
+        " class="js-button equals">=</button>
+
+                <button onclick="
+            updateCalculation(' / ');
+        " class="js-button operator">/</button>
+            </p>
+
+            <p class="eachRow">
+                <button onclick="onClear()" class="js-button clear">Clear</button>
+            </p>
+        </div>
+    </div>
+
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
