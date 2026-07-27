@@ -70,8 +70,12 @@ body{
     color: white;
 }
 .clear{
-    width: 100%;
-    border-radius: 10px;
+    width: 70px;
+    border-radius: 50%;
     background: #791f1a;
     color: white;
+}
+.zero{
+    width: 150px;
+    height: 70px;
 }
