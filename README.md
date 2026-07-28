@@ -68,8 +68,8 @@ javascript-learning/
 |---------|--------|-----------|
 | Rock Paper Scissors | ✅ Completed | https://ankith-achar-27.github.io/javascript-learning/rock-paper-scissors/ |
 | Calculator | ✅ Completed | https://ankith-achar-27.github.io/javascript-learning/simple-calculator/ |
+| Todo List | ✅ Completed | https://ankith-achar-27.github.io/javascript-learning/to-do-list/ |
 | Coin Flip | 🚧 Coming Soon | — |
-| Todo List | 🚧 Coming Soon | — |
 | Expense Tracker | 🚧 Coming Soon | — |
 
 ---
