@@ -54,3 +54,44 @@ const ser = ['ant','cat'];
 console.log(ser.includes('cat')); // true
 
 
+const array1 =[1,2,3];
+const array2 =array1.slice();
+array2.push(4);
+console.log(array1);
+console.log(array2);
+
+//Deconstructing
+const [firstValue, secondValue] = [1,2,3];
+
+/*for(let i=1;i<=10;i++){
+    if( i === 3){
+        continue; // skip the current iteration
+    }
+    console.log(i);
+    if(i===8){
+        break; // exit a loop early
+    }
+}*/
+
+//skip a number if it divisible by 3
+
+for(let i=1;i<=10;i++){
+    if(i % 3 === 0){
+        continue;
+    }
+    console.log(i);
+}
+
+function doubleArray(nums) {
+    //const nums = [1,2,3,4];
+    const numsDoubled = [];
+
+    for(let i=0;i<nums.length;i++){
+        const n = nums[i];
+        numsDoubled.push(2*n);
+    }
+    return numsDoubled;
+}
+
+console.log(doubleArray([1,1,3]));
+console.log(doubleArray([3,5,4]));
