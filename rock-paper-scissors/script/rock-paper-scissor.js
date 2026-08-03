@@ -38,6 +38,27 @@
     return compMove;
     }
 
+    let isPlaying = false;
+    let intervalID;
+
+    function autoPLay(){
+        const playButton = document.querySelector('.js-autoplay');
+        if(!isPlaying){
+           intervalID = setInterval(function(){
+            const playerMove = pickCompMove();
+            playerGame(playerMove);
+        },1500);
+        isPlaying = true;
+       playButton.innerHTML = `Stop`;
+       playButton.classList.add('stop');
+        } else{
+            playButton.innerHTML = `Auto Play`;
+            playButton.classList.remove('stop');
+            clearInterval(intervalID);
+            isPlaying = false;
+        }
+    }
+
     function playerGame(playerMove) {
     const compMove = pickCompMove();
     let result = '';
