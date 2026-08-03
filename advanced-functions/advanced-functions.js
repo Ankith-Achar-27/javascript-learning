@@ -31,7 +31,7 @@ const obj1 = {
     }
 };
 
-obj.fun();
+obj1.fun();
 
 // Passin a value to a function
 function display(param){
@@ -62,3 +62,11 @@ setInterval(function(){
 },3000);
 
 console.log('next line');
+
+['mango',
+'apple',
+'pears'
+].forEach(function(value,index){
+    console.log(index);
+    console.log(value);
+});
