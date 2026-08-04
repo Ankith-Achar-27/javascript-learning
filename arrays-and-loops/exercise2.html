@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function removeEgg(foods) {
+            const result = [];
+
+            for (let i = 0; i < foods.length; i++) {
+                // If the string is 'egg', use continue to skip it.
+                if (foods[i] === 'egg') {
+                    continue;
+                }
+
+                // We don't need to have an else here because
+                // the only way to reach this code is if the
+                // if-statement above is false.
+                result.push(foods[i]);
+            }
+
+            return result;
+        }
+
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+</body>
+
+</html>
