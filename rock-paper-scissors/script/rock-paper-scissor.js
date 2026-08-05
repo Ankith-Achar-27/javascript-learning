@@ -74,6 +74,21 @@
             playerGame('scissors');
         });
 
+    document.addEventListener('keydown',(event)=>{
+        if(event.key === 'r'){
+            playerGame('rock');
+        }
+        else if(event.key === 'p'){
+            playerGame('paper');
+        }
+        else if(event.key === 's'){
+            playerGame('scissors');
+        }
+        else{
+            console.log('click r-Rock p-Paper s-Scissors');
+        }
+    });
+
     function playerGame(playerMove) {
     const compMove = pickCompMove();
     let result = '';
