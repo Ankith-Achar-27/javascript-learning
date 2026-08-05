@@ -17,19 +17,28 @@ function renderTodoList(){
         const html =
         `<div>${name}</div>
         <div>${dueDate}</div>
-        <button class='delete-button' onclick="todoList.splice(${index},1);
-        renderTodoList();
-        localStorage.setItem('todoList', JSON.stringify(todoList));">
+        <button class='delete-button js-delete-button'>
         Delete
         </button>`;
          todoListHTML += html;
     });
 
-    for(let i=0;i<todoList.length;i++){
-
-    }
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+// To select all the buttons
+    document.querySelectorAll('.js-delete-button')
+        .forEach((deleteButton, index) => {
+            deleteButton.addEventListener('click', () => {
+                todoList.splice(index, 1);
+                localStorage.setItem('todoList', JSON.stringify(todoList));
+                renderTodoList();
+            });
+        });
 }
+
+document.querySelector('.js-add-todo')
+    .addEventListener('click',()=>{
+        addToDo();
+    });
 
 function addToDo(){
     const inputElement = document.querySelector('.js-input-name');
