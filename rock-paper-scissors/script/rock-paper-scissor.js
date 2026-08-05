@@ -44,7 +44,7 @@
     function autoPLay(){
         const playButton = document.querySelector('.js-autoplay');
         if(!isPlaying){
-           intervalID = setInterval(function(){
+           intervalID = setInterval(() => {
             const playerMove = pickCompMove();
             playerGame(playerMove);
         },1500);

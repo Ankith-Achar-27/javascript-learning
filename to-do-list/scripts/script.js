@@ -9,7 +9,7 @@ function renderTodoList(){
 
     let todoListHTML='';
 
-    todoList.forEach(function(todoObject,index){
+    todoList.forEach((todoObject,index) => {
         // const name = todoObject.name;
         // const dueDate = todoObject.dueDate;
         const { name, dueDate } = todoObject;
