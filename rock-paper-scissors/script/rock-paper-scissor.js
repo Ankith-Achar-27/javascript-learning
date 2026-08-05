@@ -59,6 +59,21 @@
         }
     }
 
+    document.querySelector('.js-rock-button')
+        .addEventListener('click',()=>{
+            playerGame('rock');
+        });
+
+    document.querySelector('.js-paper-button')
+    .addEventListener('click',()=>{
+       playerGame('paper');
+    });
+
+    document.querySelector('.js-scissors-button')
+        .addEventListener('click',()=>{
+            playerGame('scissors');
+        });
+
     function playerGame(playerMove) {
     const compMove = pickCompMove();
     let result = '';
