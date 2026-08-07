@@ -41,6 +41,11 @@
     let isPlaying = false;
     let intervalID;
 
+    document.querySelector('.js-autoplay')
+        .addEventListener('click',()=>{
+            autoPLay();
+        });
+
     function autoPLay(){
         const playButton = document.querySelector('.js-autoplay');
         if(!isPlaying){
@@ -49,7 +54,7 @@
             playerGame(playerMove);
         },1500);
         isPlaying = true;
-       playButton.innerHTML = `Stop`;
+       playButton.innerHTML = `Stop PLaying`;
        playButton.classList.add('stop');
         } else{
             playButton.innerHTML = `Auto Play`;
@@ -83,6 +88,12 @@
         }
         else if(event.key === 's'){
             playerGame('scissors');
+        }
+        else if(event.key === 'a'){
+            autoPLay();
+        }
+        else if(event.key === 'Backspace'){
+            showConfirmation();
         }
         else{
             console.log('click r-Rock p-Paper s-Scissors');
@@ -149,10 +160,40 @@
         .innerHTML = ` Wins: ${score.win}, Losses: ${score.loss}, Ties: ${score.tie}`;
     }
 
+    document.querySelector('.js-reset-score-button')
+        .addEventListener('click',()=>{
+            showConfirmation();
+        });
+
+
+    function showConfirmation(){
+        document.querySelector('.js-confirmation-reset-score')
+            .innerHTML = `Are you sure you want reset the Score?
+            <button class="js-yes confirm-button">Yes</button>
+            <button class="js-no confirm-button">No</button>`;
+
+        confirmButton();
+    }
+
+    function confirmButton(){
+        document.querySelector('.js-yes')
+            .addEventListener('click', () => {
+                resetScore();
+        });
+        document.querySelector('.js-no')
+            .addEventListener('click', () => {
+            document.querySelector('.js-confirmation-reset-score').innerHTML = '';
+        });
+    }
+
+
+
     function resetScore(){
+
         score.win=0;
         score.loss=0;
         score.tie=0;
         localStorage.removeItem('score');
         updateScoreElement();
+        document.querySelector('.js-confirmation').innerHTML = '';
     }

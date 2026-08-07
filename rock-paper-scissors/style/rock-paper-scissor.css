@@ -46,3 +46,6 @@ body{
 .stop{
     background-color: red;
 }
+.confirm-button{
+    cursor: pointer;
+}
