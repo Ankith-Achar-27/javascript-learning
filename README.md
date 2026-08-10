@@ -30,6 +30,7 @@ javascript-learning/
 ├── functions/
 ├── objects/
 ├── rock-paper-scissors/
+├── amazon-project/
 ├── strings/
 ├── variables/
 ├── README.md
