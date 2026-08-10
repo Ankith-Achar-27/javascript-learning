@@ -1,0 +1,123 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111827;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .header h1 span {
+            color: #ff9900;
+        }
+
+        .header p {
+            color: #9ca3af;
+            font-size: 18px;
+        }
+
+        .project-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project-info h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            color: #9ca3af;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            text-decoration: none;
+            color: white;
+
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 14px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            transition: transform 0.2s ease,
+                        border-color 0.2s ease,
+                        background 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: #263244;
+            border-color: #ff9900;
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #9ca3af;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 45px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer span {
+            color: #ff9900;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 36px;
+            }
+        }
