@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+nav h2 {
+    color: #60a5fa;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 90px 0;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #60a5fa;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #c9d1d9;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.button-group {
+    margin-top: 40px;
+}
+
+.button-group a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    margin: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.secondary {
+    border: 2px solid #3b82f6;
+    color: white;
+}
+
+.button-group a:hover {
+    transform: translateY(-4px);
+}
+
+/* SECTION */
+
+section {
+    margin: 60px 0;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* GRID */
+
+.projects {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+
+}
+
+.card {
+
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+    border-color: #60a5fa;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+
+}
+
+.card a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.title {
+
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+
+}
+
+.description {
+
+    color: #c9d1d9;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    background: #16a34a;
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+}
+
+.coming {
+
+    background: #d97706;
+
+}
+
+.badge.inProgress {
+
+    background: #2563eb;
+
+}
+
+footer {
+
+    text-align: center;
+
+    padding: 50px 0;
+
+    color: #9ca3af;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    margin-top: 60px;
+
+}
+
+@media(max-width:650px) {
+
+    nav {
+
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+}
