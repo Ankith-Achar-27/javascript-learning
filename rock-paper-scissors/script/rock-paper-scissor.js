@@ -195,5 +195,5 @@
         score.tie=0;
         localStorage.removeItem('score');
         updateScoreElement();
-        document.querySelector('.js-confirmation').innerHTML = '';
+        document.querySelector('.js-confirmation-reset-score').innerHTML = '';
     }
