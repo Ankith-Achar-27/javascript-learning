@@ -3,6 +3,7 @@ import { products } from "../data/products.js";
 import { fixCurrencyFormat } from "./utils/money.js";
 
 let productHTML = '';
+updateCartQuantity();
 
 products.forEach((product)=>{
     productHTML += `
@@ -26,9 +27,9 @@ products.forEach((product)=>{
                         $${fixCurrencyFormat(product.priceCents)}
                     </div>
 
-                    <div class="product-quantity-container">
-                        <select>
-                            <option selected value="1">1</option>
+                    <div class="product-quantity-container js-product-container-${product.id}" data-product-id='${product.id}'>
+                        <select class="js-quantity-select">
+                            <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -70,7 +71,14 @@ function updateCartQuantity(){
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
     button.addEventListener('click' , ()=>{
         const productId = button.dataset.productId;
-        addToCart(productId);
+        const productContainer = document.querySelector(
+          `.js-product-container-${productId}`
+        );
+
+        const quantity = Number(
+            productContainer.querySelector('.js-quantity-select').value
+        );
+        addToCart(productId,quantity);
         updateCartQuantity();
 });
 });
