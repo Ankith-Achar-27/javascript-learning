@@ -78,6 +78,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
         const quantity = Number(
             productContainer.querySelector('.js-quantity-select').value
         );
+
         addToCart(productId,quantity);
         updateCartQuantity();
 });

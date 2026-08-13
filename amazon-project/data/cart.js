@@ -29,7 +29,7 @@ export function addToCart(productId,quantity){
         } else{
             cart.push({
             productId:productId,
-            quantity:1
+            quantity:quantity
         });
     }
     saveToStorage();
