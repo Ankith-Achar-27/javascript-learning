@@ -6,10 +6,6 @@ import {renderCheckoutHeader} from './utils/updateCheckoutHeader.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import { deliveryOptions } from '../data/deliveryOptions.js';
 
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
-const formattedDeliveryDate = deliveryDate.format('dddd, MMMM D');
-
 let cartSummaryHTML = '';
 
 const cartQuantity = updateCartQuantity(cart);
