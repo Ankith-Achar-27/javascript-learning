@@ -1,23 +1,22 @@
 import { cart } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
 import { getDeiveryOption} from "../../data/deliveryOptions.js";
-import {fixCurrencyFormat} from "../utils/money.js"
 
 export function renderPaymentSummary(){
-    let productPriceCents = 0;
-    let shippingPriceCents =0;
+    let productPrice = 0;
+    let shippingPrice =0;
 
     cart.forEach((cartItem)=>{
        const product =  getProduct(cartItem.productId);
-       productPriceCents += product.priceCents * cartItem.quantity;
+       productPrice += product.priceRupees * cartItem.quantity;
 
        const deliveryOption = getDeiveryOption(cartItem.deliveryOptionId);
-       shippingPriceCents += deliveryOption.priceCents;
+       shippingPrice += deliveryOption.priceRupees;
     });
 
-    const totalBeforeTaxCents = productPriceCents + shippingPriceCents;
-    const taxCents = totalBeforeTaxCents*0.1;
-    const totalCents = totalBeforeTaxCents + taxCents;
+    const totalBeforeTax = productPrice + shippingPrice;
+    const tax = totalBeforeTax*0.1;
+    const total = totalBeforeTax + tax;
 
     const paymentSummaryHTML = `
              <div class="payment-summary-title">
@@ -26,27 +25,27 @@ export function renderPaymentSummary(){
 
                 <div class="payment-summary-row">
                     <div>Items (3):</div>
-                    <div class="payment-summary-money">$${fixCurrencyFormat(productPriceCents)}</div>
+                    <div class="payment-summary-money">₹${productPrice}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Shipping &amp; handling:</div>
-                    <div class="payment-summary-money">$${fixCurrencyFormat(shippingPriceCents)}</div>
+                    <div class="payment-summary-money">₹${shippingPrice}</div>
                 </div>
 
                 <div class="payment-summary-row subtotal-row">
                     <div>Total before tax:</div>
-                    <div class="payment-summary-money">$${fixCurrencyFormat(totalBeforeTaxCents)}</div>
+                    <div class="payment-summary-money">₹${totalBeforeTax}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Estimated tax (10%):</div>
-                    <div class="payment-summary-money">$${fixCurrencyFormat(taxCents)}</div>
+                    <div class="payment-summary-money">₹${tax}</div>
                 </div>
 
                 <div class="payment-summary-row total-row">
                     <div>Order total:</div>
-                    <div class="payment-summary-money">$${fixCurrencyFormat(totalCents)}</div>
+                    <div class="payment-summary-money">₹${total}</div>
                 </div>
 
                 <button class="place-order-button button-primary">

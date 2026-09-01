@@ -1,6 +1,5 @@
 import {cart, removeCartItem, updateDeliveryOption} from '../../data/cart.js';
 import {products,getProduct} from '../../data/products.js';
-import {fixCurrencyFormat} from '../utils/money.js';
 import {updateCartQuantity} from '../utils/updateCart.js';
 import {renderCheckoutHeader} from '../utils/updateCheckoutHeader.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
@@ -50,7 +49,7 @@ export function renderOrderSummary(){
                     ${matchingProduct.name}
                 </div>
                 <div class="product-price">
-                    $${fixCurrencyFormat(matchingProduct.priceCents)}
+                    ₹${matchingProduct.priceRupees}
                 </div>
                 <div class="product-quantity">
                     <span>
@@ -89,10 +88,10 @@ export function renderOrderSummary(){
                     'dddd, MMMM D'
                 );
 
-                const priceString = deliveryOption.priceCents
+                const priceString = deliveryOption.priceRupees
                 === 0
                     ? 'FREE'
-                    : `$${fixCurrencyFormat(deliveryOption.priceCents)} -`;
+                    : `₹${deliveryOption.priceRupees} -`;
 
                     const isChecked = deliveryOption.id ===
                     cartItem.deliveryOptionId;
