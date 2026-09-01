@@ -15,8 +15,8 @@ export function renderPaymentSummary(){
     });
 
     const totalBeforeTax = productPrice + shippingPrice;
-    const tax = totalBeforeTax*0.1;
-    const total = totalBeforeTax + tax;
+    const tax = (totalBeforeTax*0.1);
+    const total = (totalBeforeTax + tax);
 
     const paymentSummaryHTML = `
              <div class="payment-summary-title">
@@ -25,27 +25,27 @@ export function renderPaymentSummary(){
 
                 <div class="payment-summary-row">
                     <div>Items (3):</div>
-                    <div class="payment-summary-money">₹${productPrice}</div>
+                    <div class="payment-summary-money">₹${productPrice.toFixed(2)}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Shipping &amp; handling:</div>
-                    <div class="payment-summary-money">₹${shippingPrice}</div>
+                    <div class="payment-summary-money">₹${shippingPrice.toFixed(2)}</div>
                 </div>
 
                 <div class="payment-summary-row subtotal-row">
                     <div>Total before tax:</div>
-                    <div class="payment-summary-money">₹${totalBeforeTax}</div>
+                    <div class="payment-summary-money">₹${totalBeforeTax.toFixed(2)}</div>
                 </div>
 
                 <div class="payment-summary-row">
                     <div>Estimated tax (10%):</div>
-                    <div class="payment-summary-money">₹${tax}</div>
+                    <div class="payment-summary-money">₹${tax.toFixed(2)}</div>
                 </div>
 
                 <div class="payment-summary-row total-row">
                     <div>Order total:</div>
-                    <div class="payment-summary-money">₹${total}</div>
+                    <div class="payment-summary-money">₹${total.toFixed(2)}</div>
                 </div>
 
                 <button class="place-order-button button-primary">
