@@ -1,177 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankith Achar | JavaScript Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WS playground</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <nav>
-
-            <h2>Ankith Achar</h2>
-
-            <div>
-
-                <a href="#projects">Projects</a>
-
-                <a href="https://github.com/Ankith-Achar-27" target="_blank">GitHub</a>
-
-            </div>
-
-        </nav>
-
-        <section class="hero">
-
-            <h1>JavaScript <span>Learning</span> Repository</h1>
-
-            <p>
-
-                A collection of JavaScript exercises and projects built while learning
-                modern JavaScript. This repository documents my journey from the
-                fundamentals to building interactive web applications.
-
-            </p>
-
-            <div class="button-group">
-
-                <a class="primary" href="rock-paper-scissors/">
-
-                    Play Rock Paper Scissors
-
-                </a>
-
-                <a class="secondary" target="_blank" href="https://github.com/Ankith-Achar-27/javascript-learning">
-
-                    GitHub Repository
-
-                </a>
-
-            </div>
-
-        </section>
-
-        <section id="projects">
-
-            <h2>Projects</h2>
-
-            <div class="projects">
-
-                <div class="card">
-
-                    <a href="rock-paper-scissors/">
-
-                        <div class="title">🎮 Rock Paper Scissors</div>
-
-                        <div class="description">
-
-                            Classic Rock Paper Scissors game featuring score persistence using
-                            localStorage.
-
-                        </div>
-
-                        <span class="badge">Completed</span>
-
-                    </a>
-
-                </div>
-
-                <div class="card">
-                    <a href="simple-calculator/">
-                        <div class="title">🧮 Calculator</div>
-
-                        <div class="description">
-
-                            A fully functional calculator supporting keyboard and mouse input.
-
-                        </div>
-
-                        <span class="badge">Completed</span>
-                    </a>
-
-                </div>
-
-                <div class="card">
-                    <a href="to-do-list/">
-
-                        <div class="title">✅ Todo List</div>
-
-                        <div class="description">
-
-                            Task management application using localStorage.
-
-                        </div>
-
-                        <span class="badge">Completed</span>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="amazon-project/">
-
-                        <div class="title">🛒 Amazon Project</div>
-
-                        <div class="description">
-
-                            E-commerce website built using HTML, CSS and JavaScript.
-
-                        </div>
-
-                        <span class="badge inProgress">In Progress</span>
-                    </a>
-                </div>
-
-
-                <div class="card">
-
-                    <div class="title">🪙 Coin Flip</div>
-
-                    <div class="description">
-
-                        Randomized coin flip simulator built with JavaScript.
-
-                    </div>
-
-                    <span class="badge coming">Coming Soon</span>
-
-                </div>
-
-
-
-                <div class="card">
-
-                    <div class="title">💰 Expense Tracker</div>
-
-                    <div class="description">
-
-                        Track daily expenses with categories and summaries.
-
-                    </div>
-
-                    <span class="badge coming">Coming Soon</span>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <footer>
-
-            © 2026 Ankith Achar • Built with HTML, CSS & JavaScript
-
-        </footer>
-
+<header class="logo">
+  <a href="https://www.jetbrains.com/webstorm/">
+    <img src="/webstorm-logo.svg" alt="WebStorm logo" width="344"
+         height="90">
+  </a>
+</header>
+<main id="app">
+  <h1 class="title">
+    Thank you for trying it out. <br /> Your first project is up and running
+    now.
+  </h1>
+  <section class="counter">
+    <div class="counter-info">
+      <p class="counter-text">Counter is</p>
+      <p class="counter-value" id="counter-value"></p>
     </div>
-
+    <div class="counter-interaction">
+      <button id="increaseByOne" type="button">+1</button>
+      <button id="increaseByTwo" type="button">+2</button>
+      <button id="decreaseByOne" type="button">-1</button>
+      <button id="decreaseByTwo" type="button">-2</button>
+    </div>
+  </section>
+</main>
+<footer class="technologies">
+  <img src="/technologies.svg" alt="List of supported technologies">
+</footer>
+<script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
