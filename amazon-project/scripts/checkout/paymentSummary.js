@@ -1,6 +1,6 @@
 import { cart } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
-import { getDeiveryOption} from "../../data/deliveryOptions.js";
+import {getDeliveryOption} from "../../data/deliveryOptions.js";
 
 export function renderPaymentSummary(){
     let productPrice = 0;
@@ -10,7 +10,7 @@ export function renderPaymentSummary(){
        const product =  getProduct(cartItem.productId);
        productPrice += product.priceRupees * cartItem.quantity;
 
-       const deliveryOption = getDeiveryOption(cartItem.deliveryOptionId);
+       const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
        shippingPrice += deliveryOption.priceRupees;
     });
 

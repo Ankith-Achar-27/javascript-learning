@@ -16,7 +16,7 @@ export const deliveryOptions = [
     }
 ];
 
-export function getDeiveryOption(deliveryOptionId){
+export function getDeliveryOption(deliveryOptionId){
     let deliveryOption;
 
         deliveryOptions.forEach((option)=>{
