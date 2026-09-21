@@ -1,4 +1,4 @@
-import { cart } from "../../data/cart.js";
+import { cart } from "../../data/cart-class.js";
 import { getProduct } from "../../data/products.js";
 import {getDeliveryOption} from "../../data/deliveryOptions.js";
 
@@ -6,7 +6,7 @@ export function renderPaymentSummary(){
     let productPrice = 0;
     let shippingPrice =0;
 
-    cart.forEach((cartItem)=>{
+    cart.cartItems.forEach((cartItem)=>{
        const product =  getProduct(cartItem.productId);
        productPrice += product.priceRupees * cartItem.quantity;
 

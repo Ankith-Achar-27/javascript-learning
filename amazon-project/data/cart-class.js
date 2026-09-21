@@ -1,4 +1,4 @@
-class Cart{
+export class Cart{
 
     cartItems; //Public property
     #localStorageKey; //Private inside the class so no one can change it
@@ -73,7 +73,7 @@ class Cart{
 
 }
 
-const cart = new Cart('cart-oop');
+export const cart = new Cart('cart-oop');
 const businessCart = new Cart('cart-business');
 
 
