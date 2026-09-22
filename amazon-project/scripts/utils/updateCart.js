@@ -10,6 +10,5 @@ export function updateCartQuantity(cart) {
     if (cartQuantityElement) {
         cartQuantityElement.innerHTML = cartQuantity;
     }
-
     return cartQuantity;
 }

@@ -74,12 +74,6 @@ export class Cart{
 }
 
 export const cart = new Cart('cart-oop');
-const businessCart = new Cart('cart-business');
 
 
-
-cart.addToCart('77919bbe-0e56-475b-adde-4f24dfed3a04',1)
-
-console.log(businessCart);
-console.log(cart);
 
