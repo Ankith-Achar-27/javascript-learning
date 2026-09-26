@@ -1,3 +1,5 @@
+import {products} from "./products.js";
+
 export class Cart{
 
     cartItems; //Public property
@@ -75,5 +77,18 @@ export class Cart{
 
 export const cart = new Cart('cart-oop');
 
+
+export function loadCart(fun) {
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('load',()=>{
+        console.log(xhr.responseText);
+        if (fun) {
+            fun();
+        }
+    });
+    xhr.open("GET", "https://supersimplebackend.dev/cart");
+    xhr.send();
+}
 
 

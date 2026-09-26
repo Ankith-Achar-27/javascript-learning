@@ -4,14 +4,44 @@ import { cart } from "../data/cart-class.js";
 import {updateCartQuantity} from "./utils/updateCart.js"
 import {renderCheckoutHeader} from "./utils/updateCheckoutHeader.js"
 import {loadProducts} from "../data/products.js"
+import {loadCart} from "../data/cart-class.js";
 //import '../data/backend-practise.js'
 
 
 const quantity = updateCartQuantity(cart);
 renderCheckoutHeader(quantity);
 
-loadProducts(()=>{
+
+Promise.all([
+    new Promise((resolve)=>{
+        loadProducts(()=>{
+            resolve();
+        });
+    }),
+    new Promise((resolve)=>{
+        loadCart(()=>{
+            resolve();
+        })
+    })
+
+]).then(()=>{
     renderOrderSummary();
     renderPaymentSummary();
-})
+});
 
+/*
+new Promise((resolve)=>{
+    loadProducts(()=>{
+        resolve();
+    });
+}).then(()=>{
+    return new Promise((resolve)=>{
+        loadCart(()=>{
+            resolve();
+        })
+    })
+}).then(()=>{
+    renderOrderSummary();
+    renderPaymentSummary();
+});
+*/
