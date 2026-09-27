@@ -3,7 +3,7 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 import { cart } from "../data/cart-class.js";
 import {updateCartQuantity} from "./utils/updateCart.js"
 import {renderCheckoutHeader} from "./utils/updateCheckoutHeader.js"
-import {loadProducts,loadProductsFetch} from "../data/products.js"
+import {loadProductsFetch} from "../data/products.js"
 import {loadCart} from "../data/cart-class.js";
 //import '../data/backend-practise.js'
 
@@ -13,13 +13,19 @@ renderCheckoutHeader(quantity);
 
 
 async function loadPage(){
-    await loadProductsFetch();
 
-    await new Promise((resolve)=>{
-        loadCart(()=>{
-            resolve();
-        })
-    });
+    try{
+        await loadProductsFetch();
+
+        await new Promise((resolve)=>{
+            loadCart(()=>{
+                resolve();
+            })
+        });
+    } catch (error) {
+        console.error('Error in loadPage()', error);
+    }
+
     renderOrderSummary();
     renderPaymentSummary();
 }
